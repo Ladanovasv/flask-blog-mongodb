@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h3 class="mb-20">Список статьей</h3>
+
+  <div class="radius10 mw-630 list-group m-auto">
+    {% for article in articles %}
+      <a href="article/{{article.slug}}" class="lh-50 list-group-item list-group-item-action"><b>{{article.title}}</b></a>
+    {% endfor %}
+  </div>
+
+{% endblock %}

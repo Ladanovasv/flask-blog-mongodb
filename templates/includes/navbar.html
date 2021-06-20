@@ -1,0 +1,35 @@
+<nav class="pt-60  bg-light lh-40 navigation_2">
+    <div class="container ">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-xl-2 col-lg-3 text-center text-lg-left">
+                <a href="/" class="mr-20 link img_link">
+                    <img src="../../static/images/logo.svg" alt="Logo" class="img-fluid" data-aos="fade-down" data-aos-delay="0">
+                </a>
+            </div>
+            <div class="col-xl-10 col-lg-9 d-flex flex-wrap align-items-center justify-content-center justify-content-md-between">
+                <div class="mb-10 mb-md-0" data-aos="fade-down" data-aos-delay="250">
+                    <a href="/articles" class="link mx-15 color-main">
+                        Список статьей
+                    </a>
+                </div>
+                <div class="text-md-right" data-aos="fade-down" data-aos-delay="500">
+                    {% if session.logged_in %}
+                        <a href="/dashboard" class="link mr-15 color-main">
+                            Dashboard
+                        </a>
+                        <a href="/logout" class="link mx-15 color-main">
+                            Выход
+                        </a>
+                    {% else %}
+                        <a href="/register" class="link mx-15 color-main">
+                            Регистрация
+                        </a>
+                        <a href="/login" class="btn mx-15 sm color-main border-gray f-16">
+                            Вход
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

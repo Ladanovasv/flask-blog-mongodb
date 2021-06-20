@@ -1,0 +1,22 @@
+
+
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="container">
+  {% from "includes/_formhelpers.html" import render_field %}
+  <form method="POST" action="" class="bg-light mx-auto radius10 pt-40 px-50 pb-30">
+    {{ form.csrf_token }}
+    <h2 class="mb-40 small text-center" data-aos="fade-down" data-aos-delay="0">
+      Редактировать статью
+    </h2>
+    <div class="mb-10 input_holder" data-aos="fade-down" data-aos-delay="0">
+      {{form.title(class_="input border-gray focus-action-1 color-heading placeholder-heading w-full")}}
+    </div>
+    {{ form.body(class_="input border-gray focus-action-1 color-heading placeholder-heading w-full") }}
+    <input class="btn mt-25 action-1 w-full" type="submit" value="Редактировать статью">
+  </form>
+  {{ ckeditor.load() }}
+  {{ ckeditor.config(name='body') }}
+ </div> 
+{% endblock %}

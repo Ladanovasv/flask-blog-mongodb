@@ -1,0 +1,27 @@
+
+{% extends 'layout.html' %}
+
+{% block body %}
+<section class="pt-55 pb-20 bg-light text-center showcase_2">
+  <div class="container px-xl-0">
+    <div class="row justify-content-center">
+      <div class="col-xl-8 col-lg-10">
+        <h2 class="small" data-aos="fade-down" data-aos-delay="0">
+          Блог Flask
+        </h2>
+        <div class="mt-15  f-22 color-heading text-adaptive" data-aos="fade-down" data-aos-delay="250">
+          Этот блог, созданный на языке программирования Python.
+          Проект создан на Flask с базой данных MongoDB.
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      {% if session.logged_in == NULL %}
+      <a href="/register" class="btn mx-25 action-1">Регистрация</a>
+      <a href="/login" class="btn action-2">Вход</a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% include 'includes/block_page.html' %}
+{% endblock %}

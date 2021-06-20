@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="container px-xl-0">
+    {% from "includes/_formhelpers.html" import render_field %}
+    <form action="" method="POST" class="bg-light mx-auto mw-430 radius10 pt-40 px-50 pb-30">
+        <h2 class="mb-40 small text-center" data-aos="fade-down" data-aos-delay="0">
+            Вход
+        </h2>
+        <div class="mb-20 input_holder" data-aos="fade-down" data-aos-delay="0">
+            {{form.username(class_="input border-gray focus-action-1 color-heading placeholder-heading w-full")}}
+        </div>
+        <div class="mb-20 input_holder" data-aos="fade-down" data-aos-delay="0">
+            {{form.password(class_="input border-gray focus-action-1 color-heading placeholder-heading w-full")}}
+        </div>
+        <div data-aos="fade-down" data-aos-delay="250">
+        </div>
+        <div data-aos="fade-down" data-aos-delay="500">
+            <input type="submit" class="btn mt-25 action-1 w-full" value="Войти">
+            <div class="mt-50 hr bg-gray h-1" data-aos="fade-down" data-aos-delay="500">
+            </div>
+            <div class="mt-25 f-18 medium color-heading text-center" data-aos="fade-down" data-aos-delay="750">
+                <span>
+                    У вас нет аккаунта?
+                </span>
+                <a href="/register" class="link action-1">
+                    заргистрироваться
+                </a>
+            </div>
+    </form>
+</div>
+{% endblock %}

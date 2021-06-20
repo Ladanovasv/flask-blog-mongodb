@@ -1,0 +1,23 @@
+<section class="pt-10 pb-90 bg-light text-center showcase_2">
+    <div class="container px-xl-0">
+        <div class="row">
+        {% for post in posts %}
+            <div class="col-md-4 col-sm-6" data-aos="fade-down" data-aos-delay="0">
+                <a href="/article/{{ post.slug }}" class="mt-50 link img_link color-main">
+                    <div class="cropped">
+                       <img src="/files/{{ post.image }}" 
+                        alt="" class="img-fluid radius10 "> 
+                    </div>
+                    
+                    <div class="mt-20 mb-15 f-22 title">
+                        {{ post.title }}
+                    </div>
+                    <div class="color-heading f-14 semibold text-uppercase sp-20">
+                        {{ post.author }}
+                    </div>
+                </a>
+            </div>
+        {% endfor %}    
+        </div>
+    </div>
+</section>
